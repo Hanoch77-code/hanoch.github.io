@@ -1,0 +1,37 @@
+/* 1. Default styles (Mobile-First Approach) */
+body {
+  font-size: 14px;
+  background-color: white;
+}
+.container {
+  width: 100%; /* Full width on small screens */
+  padding: 10px;
+}
+
+/* 2. Styles for Tablets (Screens 768px wide and up) */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%; /* Slight margin on medium screens */
+  }
+}
+
+/* 3. Styles for Large Desktops (Screens 1200px wide and up) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 1140px; /* Locks the content width so it doesn't stretch forever */
+    margin: 0 auto;    /* Centers the layout on ultra-wide screens */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
