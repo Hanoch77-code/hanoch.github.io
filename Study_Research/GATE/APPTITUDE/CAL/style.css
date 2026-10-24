@@ -1,0 +1,82 @@
+/* 1. Default styles (Mobile-First Approach) */
+body {
+  font-size: 14px;
+  background-color: white;
+}
+.container {
+  width: 100%; /* Full width on small screens */
+  padding: 10px;
+}
+
+/* 2. Styles for Tablets (Screens 768px wide and up) */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%; /* Slight margin on medium screens */
+  }
+}
+
+/* 3. Styles for Large Desktops (Screens 1200px wide and up) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 1140px; /* Locks the content width so it doesn't stretch forever */
+    margin: 0 auto;    /* Centers the layout on ultra-wide screens */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.thumbnail {
+    width: 300px;
+    max-width: 100%;
+    cursor: zoom-in;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    touch-action: none;   /* lets pinch/drag work on touch screens */
+    z-index: 1000;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.zoom-img {
+    max-width: 95vw;
+    max-height: 95vh;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform-origin: center center;
+    cursor: grab;
+}
+
+.zoom-img:active {
+    cursor: grabbing;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 2rem;
+    line-height: 1;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
